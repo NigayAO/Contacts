@@ -13,8 +13,8 @@ struct DetailList: View {
     var body: some View {
         List {
             ImageView(image: contact.image)
-            rowView(image: "phone", text: contact.phoneNumber)
-            rowView(image: "tray", text: contact.email)
+            RowView(image: "phone", text: contact.phoneNumber)
+            RowView(image: "tray", text: contact.email)
         }
         .listStyle(.grouped)
         .navigationTitle(contact.fullName)
@@ -27,7 +27,7 @@ struct DetailList_Previews: PreviewProvider {
     }
 }
 
-struct rowView: View {
+struct RowView: View {
     let image: String
     let text: String
     

@@ -12,19 +12,17 @@ struct ContentView: View {
     private let title = "Contact List"
     
     var body: some View {
-        NavigationView {
-            TabView {
-                ListNames(contacts: contacts, title: title)
-                    .tabItem {
-                        Image(systemName: "person.3")
-                        Text("Contacts")
-                    }
-                ContactList(contacts: contacts, title: title)
-                    .tabItem {
-                        Image(systemName: "phone")
-                        Text("Numbers")
-                    }
-            }
+        TabView {
+            ListNames(contacts: contacts)
+                .tabItem {
+                    Image(systemName: "person.3")
+                    Text("Contacts")
+                }
+            ContactList(contacts: contacts)
+                .tabItem {
+                    Image(systemName: "phone")
+                    Text("Numbers")
+                }
         }
     }
 }
